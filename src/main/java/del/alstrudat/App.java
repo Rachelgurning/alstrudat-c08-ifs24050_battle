@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Program program = new Program();
-        StringBuilder output = new StringBuilder();
+        Program tsat = new Program();
         boolean first = true;
 
         while (scanner.hasNextLine()) {
@@ -14,18 +13,18 @@ public class App {
             if (line.isEmpty()) continue;
 
             String[] parts = line.split("\\s+");
-            String bilangan = parts[0];
-            int basisAsal = Integer.parseInt(parts[1]);
-            int basisTujuan = Integer.parseInt(parts[2]);
-            int modelStack = Integer.parseInt(parts[3]);
+            String bilangan   = parts[0];
+            int basisAsal     = Integer.parseInt(parts[1]);
+            int basisTujuan   = Integer.parseInt(parts[2]);
+            int modelStack    = Integer.parseInt(parts[3]);
 
-            String result = program.convert(bilangan, basisAsal, basisTujuan, modelStack);
-            if (!first) output.append("\n");
-            output.append(result);
+            String result = tsat.convert(bilangan, basisAsal, basisTujuan, modelStack);
+
+            if (!first) System.out.print("\n");
+            System.out.print(result);
             first = false;
         }
 
-        System.out.print(output.toString());
         scanner.close();
     }
 }
