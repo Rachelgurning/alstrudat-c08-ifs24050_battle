@@ -5,9 +5,7 @@ import java.util.*;
 
 public class Program {
 
-    // =============================================
-    // Inner class untuk Node (digunakan oleh BST dan AVL)
-    // =============================================
+ 
     private class TreeNode {
         int key;
         int priority;
