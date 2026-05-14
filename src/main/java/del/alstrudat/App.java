@@ -6,7 +6,6 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Program tsat = new Program();
-        boolean first = true;
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
@@ -19,10 +18,7 @@ public class App {
             int modelStack    = Integer.parseInt(parts[3]);
 
             String result = tsat.convert(bilangan, basisAsal, basisTujuan, modelStack);
-
-            if (!first) System.out.print("\n");
-            System.out.print(result);
-            first = false;
+            System.out.println(result);
         }
 
         scanner.close();
