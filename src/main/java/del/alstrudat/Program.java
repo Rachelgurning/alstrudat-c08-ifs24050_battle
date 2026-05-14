@@ -22,9 +22,7 @@ public class Program {
         }
     }
 
-    // =============================================
-    // Inner class untuk Heap Node
-    // =============================================
+
     private class HeapNode {
         int key;
         int priority;
